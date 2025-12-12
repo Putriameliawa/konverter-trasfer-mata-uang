@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-sky-100 via-blue-50 to-cyan-100 min-h-screen;
+    background-image: 
+      radial-gradient(at 50% 50%, rgba(147, 197, 253, 0.3) 0%, transparent 50%),
+      radial-gradient(at 20% 80%, rgba(186, 230, 253, 0.4) 0%, transparent 50%),
+      radial-gradient(at 80% 20%, rgba(165, 243, 252, 0.3) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-xl border border-sky-200/50 shadow-2xl rounded-3xl;
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(135, 206, 235, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+  }
+  
+  .btn-primary:hover {
+    @apply shadow-2xl;
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.4);
+  }
+  
+  .btn-primary:disabled {
+    @apply bg-gray-400 cursor-not-allowed transform-none shadow-none;
+  }
+  
+  .btn-secondary {
+    @apply bg-sky-50/80 text-sky-700 px-4 py-2 rounded-xl font-medium hover:bg-sky-100/90 transition-all duration-300 backdrop-blur-sm border border-sky-200/50;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-sky-200 focus:border-sky-400 focus:ring-2 focus:ring-sky-200 transition-all duration-300 outline-none bg-white/70 backdrop-blur-sm;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field:focus {
+    @apply bg-white/90;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
+  }
+  
+  /* Floating animation for aesthetic appeal */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Subtle pulse animation for cards */
+  .pulse-subtle {
+    animation: pulse-subtle 4s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Logo glow effect */
+  .logo-glow {
+    filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.3));
+  }
+}
