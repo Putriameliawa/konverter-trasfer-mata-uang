@@ -1,9 +1,7 @@
 <script>
   import { goto } from '$app/navigation';
   import { t } from '$lib/i18n';
-  import LanguageSelector from '$lib/components/LanguageSelector.svelte';
   import { auth } from '$lib/auth';
-  import { onMount } from 'svelte';
   
   let email = '';
   let phone = '';
@@ -46,15 +44,8 @@
   <meta name="description" content="Sign in to your Currency Transfer App account using Gmail and phone number" />
 </svelte:head>
 
-<div class="min-h-screen py-8 px-4 relative overflow-hidden">
-  <!-- Background decorative elements -->
-  <div class="absolute inset-0 z-0">
-    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-    <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-    <div class="absolute bottom-1/4 left-1/2 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-  </div>
-
-  <div class="relative z-10 max-w-md mx-auto bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden">
+<div class="flex items-center justify-center py-12">
+  <div class="w-full max-w-md bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden glass-card">
     <div class="p-1 bg-gradient-to-r from-cyan-500 to-blue-500">
       <div class="bg-white p-8 rounded-t-2xl">
         <div class="text-center mb-8">
@@ -115,37 +106,7 @@
             {/if}
           </button>
         </form>
-
-        <div class="mt-6 text-center">
-          <LanguageSelector />
-        </div>
       </div>
     </div>
   </div>
 </div>
-
-<style>
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-  @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
-  }
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-</style>

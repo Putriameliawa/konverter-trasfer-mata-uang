@@ -4,11 +4,8 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-sky-100 via-blue-50 to-cyan-100 min-h-screen;
-    background-image:
-      radial-gradient(at 50% 50%, rgba(147, 197, 253, 0.3) 0%, transparent 50%),
-      radial-gradient(at 20% 80%, rgba(186, 230, 253, 0.4) 0%, transparent 50%),
-      radial-gradient(at 80% 20%, rgba(165, 243, 252, 0.3) 0%, transparent 50%);
+    @apply min-h-screen text-slate-800;
+    /* Default text color added */
   }
 }
 

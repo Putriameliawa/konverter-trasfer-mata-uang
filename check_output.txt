@@ -1,0 +1,1704 @@
+
+> currency-converter-app@1.0.0 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+
+====================================
+Loading svelte-check in workspace: c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1
+Getting Svelte diagnostics...
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\biometricVerification.ts[39m:90:79
+[31mError[39m: 'error' is of type 'unknown'. 
+[36m      console.error('Error initializing biometric detectors:', error);
+      this.callbacks.onError?.('Failed to initialize biometric detection: ' + [35merror[36m.message);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\biometricVerification.ts[39m:136:108
+[31mError[39m: 'error' is of type 'unknown'. 
+[36m      console.error('Error initializing camera:', error);
+      this.callbacks.onError?.('Failed to access camera. Please ensure camera permissions are granted: ' + [35merror[36m.message);
+      return false;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\biometricVerification.ts[39m:303:69
+[31mError[39m: 'error' is of type 'unknown'. 
+[36m      console.error('Error capturing verification:', error);
+      this.callbacks.onError?.('Failed to capture verification: ' + [35merror[36m.message);
+      return null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:82:3
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m<div class="bank-selector relative">
+  [35m<label class="block text-sm font-medium text-sky-700 mb-2">
+    {$t('banking.bankSelection')} {required ? '*' : ''}
+  </label>[36m
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:6:14
+[31mError[39m: Variable 'onBankSelect' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let selectedBankId = '';
+  export let [35monBankSelect[36m = null;
+  export let placeholder = 'Select your bank';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:15:7
+[31mError[39m: Variable 'searchInput' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let activeFilter = 'all';
+  let [35msearchInput[36m;
+
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:45:11
+[31mError[39m: Variable 'searchInput' implicitly has an 'any' type. (js)
+[36m    setTimeout(() => {
+      if ([35msearchInput[36m) searchInput.focus();
+    }, 100);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:55:23
+[31mError[39m: Parameter 'bank' implicitly has an 'any' type. (js)
+[36m
+  function selectBank([35mbank[36m) {
+    selectedBankId = bank.id;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:57:9
+[31mError[39m: Variable 'onBankSelect' implicitly has an 'any' type. (js)
+[36m    selectedBankId = bank.id;
+    if ([35monBankSelect[36m) {
+      onBankSelect(bank);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:63:31
+[31mError[39m: Parameter 'event' implicitly has an 'any' type. (js)
+[36m
+  function handleClickOutside([35mevent[36m) {
+    if (!event.target.closest('.bank-selector')) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:69:22
+[31mError[39m: Parameter 'filter' implicitly has an 'any' type. (js)
+[36m
+  function setFilter([35mfilter[36m) {
+    activeFilter = filter;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BankSelector.svelte[39m:74:29
+[31mError[39m: Parameter 'type' implicitly has an 'any' type. (js)
+[36m
+  function getBankTypeCount([35mtype[36m) {
+    return getBanksByType(type).length;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:358:13
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m          <div>
+            [35m<label class="block text-sm font-medium text-sky-700 mb-1">Card Number</label>[36m
+            <input
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:371:13
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m          <div>
+            [35m<label class="block text-sm font-medium text-sky-700 mb-1">Card Holder Name</label>[36m
+            <input
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:383:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">Expiry Date</label>[36m
+              <input
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:392:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">Card Type</label>[36m
+              <select bind:value={atmCard.cardType} class="input-field">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:10:7
+[31mError[39m: Variable 'videoElement' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m
+  let [35mvideoElement[36m;
+  let canvasElement;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:11:7
+[31mError[39m: Variable 'canvasElement' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let videoElement;
+  let [35mcanvasElement[36m;
+  let verificationService = null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:12:7
+[31mError[39m: Variable 'verificationService' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let canvasElement;
+  let [35mverificationService[36m = null;
+  let isInitialized = false;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:39:11
+[31mError[39m: Argument of type '() => Promise<Unsubscriber>' is not assignable to parameter of type '() => (() => any) | Promise<never>'.
+  Type 'Promise<Unsubscriber>' is not assignable to type '(() => any) | Promise<never>'.
+    Type 'Promise<Unsubscriber>' is not assignable to type 'Promise<never>'.
+      Type 'Unsubscriber' is not assignable to type 'never'. (js)
+[36m
+  onMount([35masync () => {[36m
+    // Initialize auth and check authentication
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:77:72
+[31mError[39m: 'error' is of type 'unknown'. (js)
+[36m      console.error('Error initializing verification:', error);
+      errorMessage = 'Failed to initialize biometric verification: ' + [35merror[36m.message;
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:82:10
+[31mError[39m: Variable 'verificationService' implicitly has an 'any' type. (js)
+[36m  async function startCamera() {
+    if (![35mverificationService[36m || !videoElement || !canvasElement) {
+      console.error('Missing required elements for camera initialization');
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:82:34
+[31mError[39m: Variable 'videoElement' implicitly has an 'any' type. (js)
+[36m  async function startCamera() {
+    if (!verificationService || ![35mvideoElement[36m || !canvasElement) {
+      console.error('Missing required elements for camera initialization');
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:82:51
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m  async function startCamera() {
+    if (!verificationService || !videoElement || ![35mcanvasElement[36m) {
+      console.error('Missing required elements for camera initialization');
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:103:66
+[31mError[39m: 'error' is of type 'unknown'. (js)
+[36m      console.error('Error starting camera:', error);
+      errorMessage = 'Camera access denied or not available: ' + [35merror[36m.message;
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:107:31
+[31mError[39m: Parameter 'results' implicitly has an 'any' type. (js)
+[36m
+  function handleFaceDetected([35mresults[36m) {
+    faceDetected = true;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:112:31
+[31mError[39m: Parameter 'results' implicitly has an 'any' type. (js)
+[36m
+  function handleHandDetected([35mresults[36m) {
+    handDetected = true;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:133:39
+[31mError[39m: Parameter 'result' implicitly has an 'any' type. (js)
+[36m
+  function handleVerificationComplete([35mresult[36m) {
+    verificationResult = result;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:145:24
+[31mError[39m: Parameter 'error' implicitly has an 'any' type. (js)
+[36m
+  function handleError([35merror[36m) {
+    console.error('Verification error:', error);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:171:10
+[31mError[39m: Variable 'verificationService' implicitly has an 'any' type. (js)
+[36m  async function captureVerification() {
+    if (![35mverificationService[36m) {
+      errorMessage = 'Verification service not initialized';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:187:64
+[31mError[39m: 'error' is of type 'unknown'. (js)
+[36m      console.error('Error capturing verification:', error);
+      errorMessage = 'Failed to capture verification data: ' + [35merror[36m.message;
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:191:39
+[31mError[39m: Parameter 'data' implicitly has an 'any' type. (js)
+[36m
+  async function saveVerificationData([35mdata[36m) {
+    try {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:228:61
+[31mError[39m: 'error' is of type 'unknown'. (js)
+[36m      console.error('Error saving verification data:', error);
+      errorMessage = 'Failed to save verification data: ' + [35merror[36m.message;
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:249:9
+[31mError[39m: Variable 'verificationService' implicitly has an 'any' type. (js)
+[36m  function cleanup() {
+    if ([35mverificationService[36m) {
+      verificationService.cleanup();
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:254:29
+[31mError[39m: Parameter 'value' implicitly has an 'any' type. (js)
+[36m
+  function formatCardNumber([35mvalue[36m) {
+    // Remove all non-digits
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:261:34
+[31mError[39m: Parameter 'event' implicitly has an 'any' type. (js)
+[36m
+  function handleCardNumberInput([35mevent[36m) {
+    const formatted = formatCardNumber(event.target.value);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:274:29
+[31mError[39m: Parameter 'bank' implicitly has an 'any' type. (js)
+[36m  
+  function handleBankSelect([35mbank[36m) {
+    atmCard.selectedBankId = bank.id;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:404:15
+[31mError[39m: Type '(bank: any) => void' is not assignable to type 'null | undefined'. (js)
+[36m              bind:selectedBankId={atmCard.selectedBankId}
+              [35monBankSelect[36m={handleBankSelect}
+              placeholder="Select your bank"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\BiometricVerification.svelte[39m:407:25
+[31mError[39m: Cannot find name 'isLoading'. (js)
+[36m              required={true}
+              disabled={[35misLoading[36m}
+            />
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:6:14
+[31mError[39m: Variable 'selectedUser' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  export let [35mselectedUser[36m = null;
+  export let onUserSelect = null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:7:14
+[31mError[39m: Variable 'onUserSelect' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let selectedUser = null;
+  export let [35monUserSelect[36m = null;
+  export let currentUserId = null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:8:14
+[31mError[39m: Variable 'currentUserId' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let onUserSelect = null;
+  export let [35mcurrentUserId[36m = null;
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:15:44
+[31mError[39m: Argument of type 'null' is not assignable to parameter of type 'string | undefined'. (js)
+[36m  $: filteredUsers = searchQuery.trim() 
+    ? userService.searchUsers(searchQuery, [35mcurrentUserId[36m)
+    : userService.getRecentUsers(currentUserId, 5);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:16:34
+[31mError[39m: Argument of type 'null' is not assignable to parameter of type 'string | undefined'. (js)
+[36m    ? userService.searchUsers(searchQuery, currentUserId)
+    : userService.getRecentUsers([35mcurrentUserId[36m, 5);
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:18:29
+[31mError[39m: Parameter 'user' implicitly has an 'any' type. (js)
+[36m  
+  function handleUserSelect([35muser[36m) {
+    selectedUser = user;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:22:9
+[31mError[39m: Variable 'onUserSelect' implicitly has an 'any' type. (js)
+[36m    searchQuery = '';
+    if ([35monUserSelect[36m) {
+      onUserSelect(user);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:29:9
+[31mError[39m: Variable 'onUserSelect' implicitly has an 'any' type. (js)
+[36m    selectedUser = null;
+    if ([35monUserSelect[36m) {
+      onUserSelect(null);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:37:39
+[31mError[39m: Variable 'currentUserId' implicitly has an 'any' type. (js)
+[36m    if (showUserList) {
+      users = userService.getAllUsers([35mcurrentUserId[36m);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:43:8
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m<div class="user-selector">
+  {#if [35mselectedUser[36m}
+    <!-- Selected User Display -->
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserSelector.svelte[39m:83:25
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m  <!-- User Selection Dropdown -->
+  {#if showUserList && ![35mselectedUser[36m}
+    <div class="user-list bg-white border border-blue-200 rounded-lg shadow-lg mb-4 max-h-64 overflow-y-auto">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:7:14
+[31mError[39m: Variable 'onTransferReady' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  export let [35monTransferReady[36m;
+  export let selectedUser = null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:8:14
+[31mError[39m: Variable 'selectedUser' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let onTransferReady;
+  export let [35mselectedUser[36m = null;
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:13:7
+[31mError[39m: Variable 'exchangeRates' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let toCurrency = 'USD';
+  let [35mexchangeRates[36m = null;
+  let convertedAmount = 0;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:19:19
+[31mError[39m: Variable 'exchangeRates' implicitly has an 'any' type. (js)
+[36m  $: {
+    if (amount && [35mexchangeRates[36m && !isNaN(parseFloat(amount)) && parseFloat(amount) > 0) {
+      try {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:97:7
+[31mError[39m: Variable 'onTransferReady' implicitly has an 'any' type. (js)
+[36m      error = '';
+      [35monTransferReady[36m(convertedAmount, fromCurrency, toCurrency);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:107:28
+[31mError[39m: Parameter 'from' implicitly has an 'any' type. (js)
+[36m  
+  function getExchangeRate([35mfrom[36m, to, rates) {
+    if (from === to) return '1.0000';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:107:34
+[31mError[39m: Parameter 'to' implicitly has an 'any' type. (js)
+[36m  
+  function getExchangeRate(from, [35mto[36m, rates) {
+    if (from === to) return '1.0000';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:107:38
+[31mError[39m: Parameter 'rates' implicitly has an 'any' type. (js)
+[36m  
+  function getExchangeRate(from, to, [35mrates[36m) {
+    if (from === to) return '1.0000';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:136:36
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m  <!-- User Selection -->
+  <UserSelector bind:selectedUser={[35mselectedUser[36m} />
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:149:8
+[31mError[39m: Variable 'exchangeRates' implicitly has an 'any' type. (js)
+[36m  
+  {#if [35mexchangeRates[36m}
+    <div class="text-center mb-6">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\CurrencyConverter.svelte[39m:216:14
+[31mError[39m: Variable 'exchangeRates' implicitly has an 'any' type. (js)
+[36m        
+        {#if [35mexchangeRates[36m}
+          <p class="text-sm text-green-600 text-center mt-2">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:370:15
+[33mWarn[39m: A11y: visible, non-interactive elements with an on:click event must be accompanied by a keyboard event handler. Consider whether an interactive element such as <button type="button"> or <a> might be more appropriate. See https://svelte.dev/docs/accessibility-warnings#a11y-click-events-have-key-events for more details. (svelte)
+[36m            {#each filteredUsers as user}
+              [35m<div 
+                class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors duration-200 cursor-pointer {selectedUser?.id === user.id ? 'border-blue-500 bg-blue-50' : ''}"
+                on:click={() => selectUser(user)}
+              >
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center text-lg">
+                      {user.profilePicture || '👤'}
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-gray-800">{user.fullName}</h4>
+                      <p class="text-sm text-gray-600">{user.email}</p>
+                      <p class="text-xs text-gray-500">{user.region?.city || 'Kota tidak diketahui'}</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div class="flex items-center space-x-1">
+                      <span class="text-xs {user.isOnline ? 'text-green-600' : 'text-gray-500'}">
+                        {user.isOnline ? '🟢 Online' : '⚫ Offline'}
+                      </span>
+                    </div>
+                    {#if user.preferredBank}
+                      <p class="text-xs text-gray-500 mt-1">
+                        {user.preferredBank.bankId?.toUpperCase()} • {user.preferredBank.accountNumber}
+                      </p>
+                    {/if}
+                  </div>
+                </div>
+                {#if selectedUser?.id === user.id}
+                  <div class="mt-2 pt-2 border-t border-blue-200">
+                    <div class="text-xs text-blue-600">✓ Pengguna dipilih</div>
+                  </div>
+                {/if}
+              </div>[36m
+            {/each}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:370:15
+[33mWarn[39m: A11y: <div> with click handler must have an ARIA role (svelte)
+[36m            {#each filteredUsers as user}
+              [35m<div 
+                class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors duration-200 cursor-pointer {selectedUser?.id === user.id ? 'border-blue-500 bg-blue-50' : ''}"
+                on:click={() => selectUser(user)}
+              >
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center text-lg">
+                      {user.profilePicture || '👤'}
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-gray-800">{user.fullName}</h4>
+                      <p class="text-sm text-gray-600">{user.email}</p>
+                      <p class="text-xs text-gray-500">{user.region?.city || 'Kota tidak diketahui'}</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div class="flex items-center space-x-1">
+                      <span class="text-xs {user.isOnline ? 'text-green-600' : 'text-gray-500'}">
+                        {user.isOnline ? '🟢 Online' : '⚫ Offline'}
+                      </span>
+                    </div>
+                    {#if user.preferredBank}
+                      <p class="text-xs text-gray-500 mt-1">
+                        {user.preferredBank.bankId?.toUpperCase()} • {user.preferredBank.accountNumber}
+                      </p>
+                    {/if}
+                  </div>
+                </div>
+                {#if selectedUser?.id === user.id}
+                  <div class="mt-2 pt-2 border-t border-blue-200">
+                    <div class="text-xs text-blue-600">✓ Pengguna dipilih</div>
+                  </div>
+                {/if}
+              </div>[36m
+            {/each}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:9:14
+[31mError[39m: Variable 'onTransferReady' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  export let [35monTransferReady[36m;
+  export let selectedUser = null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:10:14
+[31mError[39m: Variable 'selectedUser' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let onTransferReady;
+  export let [35mselectedUser[36m = null;
+  export let transferAmount = 0;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:55:7
+[31mError[39m: Variable 'availableUsers' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  let selectedRegion = '';
+  let [35mavailableUsers[36m = [];
+  let filteredUsers = [];
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:56:7
+[31mError[39m: Variable 'filteredUsers' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  let availableUsers = [];
+  let [35mfilteredUsers[36m = [];
+  let searchQuery = '';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:65:20
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m  $: isValidRegion = selectedRegion !== '';
+  $: isValidUser = [35mselectedUser[36m !== null;
+  $: canProceed = isValidAmount && isValidRegion && isValidUser;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:71:23
+[31mError[39m: Variable 'availableUsers' implicitly has an 'any[]' type. (js)
+[36m    if (searchQuery.trim()) {
+      filteredUsers = [35mavailableUsers[36m.filter(user => 
+        user.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:77:23
+[31mError[39m: Variable 'availableUsers' implicitly has an 'any[]' type. (js)
+[36m    } else {
+      filteredUsers = [35mavailableUsers[36m;
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:82:29
+[31mError[39m: Parameter 'regionCode' implicitly has an 'any' type. (js)
+[36m  // Mock function to get users by region (in real app, this would be an API call)
+  function getUsersByRegion([35mregionCode[36m) {
+    // For demo purposes, we'll filter existing users and simulate regional distribution
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:103:35
+[31mError[39m: Parameter 'regionCode' implicitly has an 'any' type. (js)
+[36m  
+  function getRandomCityForRegion([35mregionCode[36m) {
+    const cities = {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:112:26
+[31mError[39m: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ JK: string[]; JB: string[]; JT: string[]; JI: string[]; BA: string[]; }'. (js)
+[36m    
+    const regionCities = [35mcities[regionCode][36m || ['Kota Utama'];
+    return regionCities[Math.floor(Math.random() * regionCities.length)];
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:165:23
+[31mError[39m: Parameter 'user' implicitly has an 'any' type. (js)
+[36m  
+  function selectUser([35muser[36m) {
+    selectedUser = user;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:181:7
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m      1, // Exchange rate is 1 for same currency
+      [35mselectedUser[36m,
+      'hand_gesture',
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:183:31
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m      'hand_gesture',
+      `Transfer domestik ke ${[35mselectedUser[36m.fullName} di ${selectedUser.region?.name}`
+    );
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:183:59
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m      'hand_gesture',
+      `Transfer domestik ke ${selectedUser.fullName} di ${[35mselectedUser[36m.region?.name}`
+    );
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:187:9
+[31mError[39m: Variable 'onTransferReady' implicitly has an 'any' type. (js)
+[36m    // Call parent handler
+    if ([35monTransferReady[36m) {
+      onTransferReady(transferAmount, 'IDR', 'IDR');
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:203:25
+[31mError[39m: Parameter 'value' implicitly has an 'any' type. (js)
+[36m  
+  function formatAmount([35mvalue[36m) {
+    return new Intl.NumberFormat('id-ID', {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:369:20
+[31mError[39m: Variable 'filteredUsers' implicitly has an 'any[]' type. (js)
+[36m          <div class="space-y-3 max-h-60 overflow-y-auto">
+            {#each [35mfilteredUsers[36m as user}
+              <div 
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:371:131
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m              <div 
+                class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors duration-200 cursor-pointer {[35mselectedUser[36m?.id === user.id ? 'border-blue-500 bg-blue-50' : ''}"
+                on:click={() => selectUser(user)}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:398:22
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m                </div>
+                {#if [35mselectedUser[36m?.id === user.id}
+                  <div class="mt-2 pt-2 border-t border-blue-200">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:444:54
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m            <span class="text-gray-600">Penerima:</span>
+            <span class="font-medium text-gray-800">{[35mselectedUser[36m?.fullName}</span>
+          </div>
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:448:54
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m            <span class="text-gray-600">Bank Penerima:</span>
+            <span class="font-medium text-gray-800">{[35mselectedUser[36m?.preferredBank?.bankId?.toUpperCase()} • {selectedUser?.preferredBank?.accountNumber}</span>
+          </div>
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\DomesticTransfer.svelte[39m:448:109
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m            <span class="text-gray-600">Bank Penerima:</span>
+            <span class="font-medium text-gray-800">{selectedUser?.preferredBank?.bankId?.toUpperCase()} • {[35mselectedUser[36m?.preferredBank?.accountNumber}</span>
+          </div>
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:6:14
+[31mError[39m: Variable 'onHandDetected' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let active = false;
+  export let [35monHandDetected[36m;
+  export let onHandLost;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:7:14
+[31mError[39m: Variable 'onHandLost' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let onHandDetected;
+  export let [35monHandLost[36m;
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:9:7
+[31mError[39m: Variable 'videoElement' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  let [35mvideoElement[36m;
+  let canvasElement;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:10:7
+[31mError[39m: Variable 'canvasElement' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let videoElement;
+  let [35mcanvasElement[36m;
+  let detector = null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:11:7
+[31mError[39m: Variable 'detector' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let canvasElement;
+  let [35mdetector[36m = null;
+  let isDetecting = false;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:19:25
+[31mError[39m: Variable 'videoElement' implicitly has an 'any' type. (js)
+[36m  async function startDetection() {
+    if (isDetecting || ![35mvideoElement[36m) return;
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:45:9
+[31mError[39m: Variable 'detector' implicitly has an 'any' type. (js)
+[36m  function stopDetection() {
+    if ([35mdetector[36m) {
+      detector.stop();
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:54:34
+[31mError[39m: Parameter 'result' implicitly has an 'any' type. (js)
+[36m  
+  function handleDetectionResult([35mresult[36m) {
+    detectionConfidence = result.confidence;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:59:7
+[31mError[39m: Variable 'onHandDetected' implicitly has an 'any' type. (js)
+[36m      handDetected = true;
+      [35monHandDetected[36m();
+    } else if (!result.detected && handDetected) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:62:7
+[31mError[39m: Variable 'onHandLost' implicitly has an 'any' type. (js)
+[36m      handDetected = false;
+      [35monHandLost[36m();
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:66:9
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m    // Draw detection indicator on canvas
+    if ([35mcanvasElement[36m) {
+      drawDetectionFeedback(result);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:71:34
+[31mError[39m: Parameter 'result' implicitly has an 'any' type. (js)
+[36m  
+  function drawDetectionFeedback([35mresult[36m) {
+    const ctx = canvasElement.getContext('2d');
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:72:17
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m  function drawDetectionFeedback(result) {
+    const ctx = [35mcanvasElement[36m.getContext('2d');
+    if (!ctx || !videoElement) return;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:73:18
+[31mError[39m: Variable 'videoElement' implicitly has an 'any' type. (js)
+[36m    const ctx = canvasElement.getContext('2d');
+    if (!ctx || ![35mvideoElement[36m) return;
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:75:25
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m    
+    ctx.clearRect(0, 0, [35mcanvasElement[36m.width, canvasElement.height);
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:75:46
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m    
+    ctx.clearRect(0, 0, canvasElement.width, [35mcanvasElement[36m.height);
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:80:26
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m      ctx.fillStyle = 'rgba(34, 197, 94, 0.3)';
+      ctx.fillRect(0, 0, [35mcanvasElement[36m.width, canvasElement.height);
+      
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:80:47
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m      ctx.fillStyle = 'rgba(34, 197, 94, 0.3)';
+      ctx.fillRect(0, 0, canvasElement.width, [35mcanvasElement[36m.height);
+      
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:89:28
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m      ctx.lineWidth = 4;
+      ctx.strokeRect(0, 0, [35mcanvasElement[36m.width, canvasElement.height);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:89:49
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m      ctx.lineWidth = 4;
+      ctx.strokeRect(0, 0, canvasElement.width, [35mcanvasElement[36m.height);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:100:9
+[31mError[39m: Variable 'canvasElement' implicitly has an 'any' type. (js)
+[36m  onMount(() => {
+    if ([35mcanvasElement[36m && videoElement) {
+      canvasElement.width = 640;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\HandDetector.svelte[39m:100:26
+[31mError[39m: Variable 'videoElement' implicitly has an 'any' type. (js)
+[36m  onMount(() => {
+    if (canvasElement && [35mvideoElement[36m) {
+      canvasElement.width = 640;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\LanguageSelector.svelte[39m:21:27
+[31mError[39m: Parameter 'langCode' implicitly has an 'any' type. (js)
+[36m
+  function selectLanguage([35mlangCode[36m) {
+    language.setLanguage(langCode);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\LanguageSelector.svelte[39m:30:31
+[31mError[39m: Parameter 'event' implicitly has an 'any' type. (js)
+[36m
+  function handleClickOutside([35mevent[36m) {
+    if (!event.target.closest('.language-selector')) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\LoginForm.svelte[39m:18:31
+[31mError[39m: Parameter 'event' implicitly has an 'any' type. (js)
+[36m
+  async function handleSubmit([35mevent[36m) {
+    event.preventDefault();
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\LoginForm.svelte[39m:41:29
+[31mError[39m: Parameter 'value' implicitly has an 'any' type. (js)
+[36m
+  function formatPhoneInput([35mvalue[36m) {
+    // Remove all non-digit characters except +
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\LoginForm.svelte[39m:53:29
+[31mError[39m: Parameter 'event' implicitly has an 'any' type. (js)
+[36m
+  function handlePhoneInput([35mevent[36m) {
+    const formatted = formatPhoneInput(event.target.value);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:253:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">{$t('profile.fullName')}</label>[36m
+              {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:271:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">{$t('auth.email')}</label>[36m
+              <p class="text-sky-800 bg-gray-50/50 px-3 py-2 rounded-lg">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:280:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">{$t('auth.phone')}</label>[36m
+              <p class="text-sky-800 bg-gray-50/50 px-3 py-2 rounded-lg">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:289:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">Date of Birth</label>[36m
+              {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:306:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">Gender</label>[36m
+              {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:328:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">Nationality</label>[36m
+              {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:346:15
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m            <div>
+              [35m<label class="block text-sm font-medium text-sky-700 mb-1">Occupation</label>[36m
+              {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:379:17
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m              <div>
+                [35m<label class="block text-sm font-medium text-sky-700 mb-1">Street Address</label>[36m
+                {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:398:19
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                <div>
+                  [35m<label class="block text-sm font-medium text-sky-700 mb-1">City</label>[36m
+                  {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:415:19
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                <div>
+                  [35m<label class="block text-sm font-medium text-sky-700 mb-1">State/Province</label>[36m
+                  {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:435:19
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                <div>
+                  [35m<label class="block text-sm font-medium text-sky-700 mb-1">Postal Code</label>[36m
+                  {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:452:19
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                <div>
+                  [35m<label class="block text-sm font-medium text-sky-700 mb-1">Country</label>[36m
+                  {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:491:19
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                {:else}
+                  [35m<label class="block text-sm font-medium text-sky-700 mb-1">Preferred Bank</label>[36m
+                  {#if user.profile.preferredBank?.bankId}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:516:21
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                  <div>
+                    [35m<label class="block text-sm font-medium text-sky-700 mb-1">Account Number</label>[36m
+                    {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:534:21
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                  <div>
+                    [35m<label class="block text-sm font-medium text-sky-700 mb-1">Account Holder Name</label>[36m
+                    {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:558:21
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                  <div>
+                    [35m<label class="block text-sm font-medium text-sky-700 mb-1">Account Number</label>[36m
+                    {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:576:21
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                  <div>
+                    [35m<label class="block text-sm font-medium text-sky-700 mb-1">Bank Name</label>[36m
+                    {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:595:19
+[33mWarn[39m: A11y: A form label must be associated with a control. (svelte)
+[36m                <div class="mt-4">
+                  [35m<label class="block text-sm font-medium text-sky-700 mb-1">Account Holder</label>[36m
+                  {#if isEditing}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:13:7
+[31mError[39m: Variable 'user' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m
+  let [35muser[36m = null;
+  let editData = {};
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:29:11
+[31mError[39m: Argument of type '() => Promise<Unsubscriber>' is not assignable to parameter of type '() => (() => any) | Promise<never>'.
+  Type 'Promise<Unsubscriber>' is not assignable to type '(() => any) | Promise<never>'.
+    Type 'Promise<Unsubscriber>' is not assignable to type 'Promise<never>'.
+      Type 'Unsubscriber' is not assignable to type 'never'. (js)
+[36m  
+  onMount([35masync () => {[36m
+    // Initialize auth store
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:45:22
+[31mError[39m: Variable 'user' implicitly has an 'any' type. (js)
+[36m    isEditing = !isEditing;
+    if (isEditing && [35muser[36m) {
+      // Reset edit data when starting to edit
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:50:21
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m      // Ensure preferredBank object exists
+      if (!editData.[35mpreferredBank[36m) {
+        editData.preferredBank = {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:51:18
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m      if (!editData.preferredBank) {
+        editData.[35mpreferredBank[36m = {
+          bankId: '',
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:91:9
+[31mError[39m: Variable 'user' implicitly has an 'any' type. (js)
+[36m    isEditing = false;
+    if ([35muser[36m) {
+      editData = JSON.parse(JSON.stringify(user.profile));
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:95:21
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m      // Ensure preferredBank object exists
+      if (!editData.[35mpreferredBank[36m) {
+        editData.preferredBank = {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:96:18
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m      if (!editData.preferredBank) {
+        editData.[35mpreferredBank[36m = {
+          bankId: '',
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:112:23
+[31mError[39m: Parameter 'dateString' implicitly has an 'any' type. (js)
+[36m
+  function formatDate([35mdateString[36m) {
+    if (!dateString) return '';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:122:10
+[31mError[39m: Variable 'user' implicitly has an 'any' type. (js)
+[36m  function calculateMembershipDuration() {
+    if (![35muser[36m?.profile?.memberSince) return '';
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:126:31
+[31mError[39m: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. (js)
+[36m    const now = new Date();
+    const diffTime = Math.abs([35mnow[36m - memberSince);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:126:37
+[31mError[39m: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. (js)
+[36m    const now = new Date();
+    const diffTime = Math.abs(now - [35mmemberSince[36m);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:145:29
+[31mError[39m: Parameter 'bank' implicitly has an 'any' type. (js)
+[36m
+  function handleBankSelect([35mbank[36m) {
+    editData.preferredBank = {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:146:14
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m  function handleBankSelect(bank) {
+    editData.[35mpreferredBank[36m = {
+      bankId: bank.id,
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:149:31
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m      bankName: bank.fullName,
+      accountNumber: editData.[35mpreferredBank[36m?.accountNumber || '',
+      accountHolder: editData.preferredBank?.accountHolder || ''
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:150:31
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m      accountNumber: editData.preferredBank?.accountNumber || '',
+      accountHolder: editData.[35mpreferredBank[36m?.accountHolder || ''
+    };
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:239:10
+[31mError[39m: Variable 'user' implicitly has an 'any' type. (js)
+[36m
+    {#if [35muser[36m}
+      <div class="grid md:grid-cols-2 gap-8">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:257:40
+[31mError[39m: Property 'fullName' does not exist on type '{}'. (js)
+[36m                  type="text"
+                  bind:value={editData.[35mfullName[36m}
+                  placeholder="Enter your full name"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:293:40
+[31mError[39m: Property 'dateOfBirth' does not exist on type '{}'. (js)
+[36m                  type="date"
+                  bind:value={editData.[35mdateOfBirth[36m}
+                  class="input-field"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:309:40
+[31mError[39m: Property 'gender' does not exist on type '{}'. (js)
+[36m                <select
+                  bind:value={editData.[35mgender[36m}
+                  class="input-field"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:332:40
+[31mError[39m: Property 'nationality' does not exist on type '{}'. (js)
+[36m                  type="text"
+                  bind:value={editData.[35mnationality[36m}
+                  placeholder="e.g., Indonesian, American, etc."
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:350:40
+[31mError[39m: Property 'occupation' does not exist on type '{}'. (js)
+[36m                  type="text"
+                  bind:value={editData.[35moccupation[36m}
+                  placeholder="Your job or profession"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:383:42
+[31mError[39m: Property 'address' does not exist on type '{}'. (js)
+[36m                    type="text"
+                    bind:value={editData.[35maddress[36m.street}
+                    placeholder="Street address"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:402:44
+[31mError[39m: Property 'address' does not exist on type '{}'. (js)
+[36m                      type="text"
+                      bind:value={editData.[35maddress[36m.city}
+                      placeholder="City"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:419:44
+[31mError[39m: Property 'address' does not exist on type '{}'. (js)
+[36m                      type="text"
+                      bind:value={editData.[35maddress[36m.state}
+                      placeholder="State/Province"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:439:44
+[31mError[39m: Property 'address' does not exist on type '{}'. (js)
+[36m                      type="text"
+                      bind:value={editData.[35maddress[36m.postalCode}
+                      placeholder="Postal Code"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:456:44
+[31mError[39m: Property 'address' does not exist on type '{}'. (js)
+[36m                      type="text"
+                      bind:value={editData.[35maddress[36m.country}
+                      placeholder="Country"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:485:46
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m                  <BankSelector
+                    selectedBankId={editData.[35mpreferredBank[36m?.bankId || ''}
+                    onBankSelect={handleBankSelect}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:486:21
+[31mError[39m: Type '(bank: any) => void' is not assignable to type 'null | undefined'. (js)
+[36m                    selectedBankId={editData.preferredBank?.bankId || ''}
+                    [35monBankSelect[36m={handleBankSelect}
+                    placeholder="Select your preferred bank"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:520:46
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m                        type="text"
+                        bind:value={editData.[35mpreferredBank[36m.accountNumber}
+                        placeholder="Your account number"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:538:46
+[31mError[39m: Property 'preferredBank' does not exist on type '{}'. (js)
+[36m                        type="text"
+                        bind:value={editData.[35mpreferredBank[36m.accountHolder}
+                        placeholder="Account holder name"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:562:46
+[31mError[39m: Property 'bankAccount' does not exist on type '{}'. (js)
+[36m                        type="text"
+                        bind:value={editData.[35mbankAccount[36m.accountNumber}
+                        placeholder="Account number"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:580:46
+[31mError[39m: Property 'bankAccount' does not exist on type '{}'. (js)
+[36m                        type="text"
+                        bind:value={editData.[35mbankAccount[36m.bankName}
+                        placeholder="Bank name"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\MemberProfile.svelte[39m:599:44
+[31mError[39m: Property 'bankAccount' does not exist on type '{}'. (js)
+[36m                      type="text"
+                      bind:value={editData.[35mbankAccount[36m.accountHolder}
+                      placeholder="Account holder name"
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:346:5
+[33mWarn[39m: Unknown at rule @apply (css)
+[36m  .transfer-history {
+    [35m@apply[36m w-full;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:7:14
+[31mError[39m: Variable 'userId' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  export let [35muserId[36m = null; // Optional: filter by user ID
+  export let maxItems = null; // Optional: limit number of items
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:12:7
+[31mError[39m: Variable 'transfers' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  
+  let [35mtransfers[36m = [];
+  let filteredTransfers = [];
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:13:7
+[31mError[39m: Variable 'filteredTransfers' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  let transfers = [];
+  let [35mfilteredTransfers[36m = [];
+  let searchQuery = '';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:19:7
+[31mError[39m: Variable 'stats' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let showStats = false;
+  let [35mstats[36m = null;
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:25:78
+[31mError[39m: Variable 'transfers' implicitly has an 'any[]' type. (js)
+[36m    // Apply filters
+    let filtered = userId ? transferHistoryService.getAllTransfers(userId) : [35mtransfers[36m;
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:83:28
+[31mError[39m: Parameter 'transfer' implicitly has an 'any' type. (js)
+[36m  
+  function getTransferIcon([35mtransfer[36m) {
+    switch (transfer.type) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:96:27
+[31mError[39m: Parameter 'status' implicitly has an 'any' type. (js)
+[36m  
+  function getStatusColor([35mstatus[36m) {
+    switch (status) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:109:25
+[31mError[39m: Parameter 'type' implicitly has an 'any' type. (js)
+[36m  
+  function getTypeColor([35mtype[36m) {
+    switch (type) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:124:23
+[31mError[39m: Variable 'stats' implicitly has an 'any' type. (js)
+[36m    showStats = !showStats;
+    if (showStats && ![35mstats[36m) {
+      stats = transferHistoryService.getTransferStats(userId || undefined);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:125:55
+[31mError[39m: Variable 'userId' implicitly has an 'any' type. (js)
+[36m    if (showStats && !stats) {
+      stats = transferHistoryService.getTransferStats([35muserId[36m || undefined);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:201:23
+[31mError[39m: Variable 'stats' implicitly has an 'any' type. (js)
+[36m    <!-- Statistics Panel -->
+    {#if showStats && [35mstats[36m}
+      <div class="bg-gradient-to-r from-sky-50 to-cyan-50 rounded-lg border border-sky-200 p-4 mb-4">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\TransferHistory.svelte[39m:239:14
+[31mError[39m: Variable 'filteredTransfers' implicitly has an 'any[]' type. (js)
+[36m    {:else}
+      {#each [35mfilteredTransfers[36m as transfer (transfer.id)}
+        <div class="bg-white rounded-lg border border-gray-200 hover:border-sky-300 transition-colors duration-200 {compact ? 'p-3' : 'p-4'}">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:7:14
+[31mError[39m: Variable 'onUserSelect' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  export let [35monUserSelect[36m = null; // Callback when user is selected for transfer
+  export let showSelectButton = false; // Show select button for transfer
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:9:14
+[31mError[39m: Variable 'currentUserId' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  export let showSelectButton = false; // Show select button for transfer
+  export let [35mcurrentUserId[36m = null; // Current user ID to exclude from list
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:11:7
+[31mError[39m: Variable 'users' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  
+  let [35musers[36m = [];
+  let filteredUsers = [];
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:12:7
+[31mError[39m: Variable 'filteredUsers' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  let users = [];
+  let [35mfilteredUsers[36m = [];
+  let searchQuery = '';
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:23:37
+[31mError[39m: Variable 'currentUserId' implicitly has an 'any' type. (js)
+[36m  function loadUsers() {
+    users = userService.getAllUsers([35mcurrentUserId[36m);
+    filterUsers();
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:28:21
+[31mError[39m: Variable 'users' implicitly has an 'any[]' type. (js)
+[36m  function filterUsers() {
+    let baseUsers = [35musers[36m;
+    
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:32:56
+[31mError[39m: Variable 'currentUserId' implicitly has an 'any' type. (js)
+[36m    if (searchQuery.trim()) {
+      baseUsers = userService.searchUsers(searchQuery, [35mcurrentUserId[36m);
+    }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:41:52
+[31mError[39m: Variable 'currentUserId' implicitly has an 'any' type. (js)
+[36m      case 'recent':
+        filteredUsers = userService.getRecentUsers([35mcurrentUserId[36m, 10);
+        if (searchQuery.trim()) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:64:29
+[31mError[39m: Parameter 'user' implicitly has an 'any' type. (js)
+[36m  
+  function handleUserSelect([35muser[36m) {
+    if (onUserSelect) {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:65:9
+[31mError[39m: Variable 'onUserSelect' implicitly has an 'any' type. (js)
+[36m  function handleUserSelect(user) {
+    if ([35monUserSelect[36m) {
+      onUserSelect(user);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:70:24
+[31mError[39m: Parameter 'user' implicitly has an 'any' type. (js)
+[36m  
+  function getUserBank([35muser[36m) {
+    if (!user.preferredBank?.bankId) return null;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:75:30
+[31mError[39m: Parameter 'user' implicitly has an 'any' type. (js)
+[36m  
+  function canTransferToUser([35muser[36m) {
+    return userService.canReceiveTransfer(user);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\UserDirectory.svelte[39m:150:14
+[31mError[39m: Variable 'filteredUsers' implicitly has an 'any[]' type. (js)
+[36m    <div class="grid gap-4">
+      {#each [35mfilteredUsers[36m as user (user.id)}
+        <div class="glass-card p-4 hover:shadow-lg transition-all duration-200">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\MoneyRain.svelte[39m:10:7
+[31mError[39m: Variable 'moneyItems' implicitly has type 'any[]' in some locations where its type cannot be determined. (js)
+[36m  
+  let [35mmoneyItems[36m = [];
+
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\MoneyRain.svelte[39m:34:10
+[31mError[39m: Variable 'moneyItems' implicitly has an 'any[]' type. (js)
+[36m<div class="money-rain-container">
+  {#each [35mmoneyItems[36m as item (item.id)}
+    <div 
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\Navbar.svelte[39m:80:44
+[31mError[39m: Semicolon or block is expected
+
+If you expect this syntax to work, here are some suggestions: 
+If you use less/SCSS with `svelte-preprocess`, did you add `lang="scss"`/`lang="less"` to your `style` tag? If you use SCSS, it may be necessary to add the path to your NODE runtime to the setting `svelte.language-server.runtime`, or use `sass` instead of `node-sass`. 
+Did you setup a `svelte.config.js`? 
+See https://github.com/sveltejs/language-tools/tree/master/docs#using-with-preprocessors for more info. (svelte)
+[36m  .nav-link {
+    @apply text-slate-600 font-medium hover[35m[36m:text-sky-600 transition-colors relative py-1;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\Navbar.svelte[39m:80:5
+[33mWarn[39m: Unknown at rule @apply (css)
+[36m  .nav-link {
+    [35m@apply[36m text-slate-600 font-medium hover:text-sky-600 transition-colors relative py-1;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\Navbar.svelte[39m:84:5
+[33mWarn[39m: Unknown at rule @apply (css)
+[36m  .nav-link.active {
+    [35m@apply[36m text-sky-700;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\Navbar.svelte[39m:89:5
+[33mWarn[39m: Unknown at rule @apply (css)
+[36m    content: '';
+    [35m@apply[36m absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-300 rounded-full;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\lib\components\layout\Navbar.svelte[39m:93:5
+[33mWarn[39m: Unknown at rule @apply (css)
+[36m  .nav-link:hover::after, .nav-link.active::after {
+    [35m@apply[36m w-full;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+layout.svelte[39m:7:14
+[33mWarn[39m: Component has unused export property 'data'. If it is for external reference only, please consider using `export const data` (svelte)
+[36m
+  export let [35mdata[36m;
+</script>
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:23:7
+[31mError[39m: Variable 'handDetectionTimeout' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let showNotification = false;
+  let [35mhandDetectionTimeout[36m = null;
+  let selectedUser = null; // Selected user for transfer
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:24:7
+[31mError[39m: Variable 'selectedUser' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let handDetectionTimeout = null;
+  let [35mselectedUser[36m = null; // Selected user for transfer
+  let transferMode = 'international'; // 'international' | 'domestic'
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:32:11
+[31mError[39m: Argument of type '() => Promise<Unsubscriber>' is not assignable to parameter of type '() => (() => any) | Promise<never>'.
+  Type 'Promise<Unsubscriber>' is not assignable to type '(() => any) | Promise<never>'.
+    Type 'Promise<Unsubscriber>' is not assignable to type 'Promise<never>'.
+      Type 'Unsubscriber' is not assignable to type 'never'. (js)
+[36m  
+  onMount([35masync () => {[36m
+    // Initialize auth store
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:56:32
+[31mError[39m: Parameter 'amount' implicitly has an 'any' type. (js)
+[36m  
+  function handleTransferReady([35mamount[36m, fromCurrency, toCurrency) {
+    transferAmount = amount;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:56:40
+[31mError[39m: Parameter 'fromCurrency' implicitly has an 'any' type. (js)
+[36m  
+  function handleTransferReady(amount, [35mfromCurrency[36m, toCurrency) {
+    transferAmount = amount;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:56:54
+[31mError[39m: Parameter 'toCurrency' implicitly has an 'any' type. (js)
+[36m  
+  function handleTransferReady(amount, fromCurrency, [35mtoCurrency[36m) {
+    transferAmount = amount;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:68:9
+[31mError[39m: Variable 'handDetectionTimeout' implicitly has an 'any' type. (js)
+[36m    // Start countdown timer
+    if ([35mhandDetectionTimeout[36m) {
+      clearTimeout(handDetectionTimeout);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:78:9
+[31mError[39m: Variable 'handDetectionTimeout' implicitly has an 'any' type. (js)
+[36m  function handleHandLost() {
+    if ([35mhandDetectionTimeout[36m) {
+      clearTimeout(handDetectionTimeout);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:89:9
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m    // Record transfer if sending to another user
+    if ([35mselectedUser[36m) {
+      userService.recordTransfer(selectedUser.id);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:101:7
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m      exchangeRate,
+      [35mselectedUser[36m,
+      'hand_gesture',
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:103:7
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m      'hand_gesture',
+      [35mselectedUser[36m ? `Transfer to ${selectedUser.fullName}` : 'Currency conversion'
+    );
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:123:9
+[31mError[39m: Variable 'handDetectionTimeout' implicitly has an 'any' type. (js)
+[36m    
+    if ([35mhandDetectionTimeout[36m) {
+      clearTimeout(handDetectionTimeout);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:129:34
+[31mError[39m: Parameter 'amount' implicitly has an 'any' type. (js)
+[36m  
+  function formatCurrencyDisplay([35mamount[36m, currencyCode) {
+    const currency = CURRENCIES.find(c => c.code === currencyCode);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:129:42
+[31mError[39m: Parameter 'currencyCode' implicitly has an 'any' type. (js)
+[36m  
+  function formatCurrencyDisplay(amount, [35mcurrencyCode[36m) {
+    const currency = CURRENCIES.find(c => c.code === currencyCode);
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:273:87
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m        {#if transferMode === 'international'}
+          <CurrencyConverter onTransferReady={handleTransferReady} bind:selectedUser={[35mselectedUser[36m} />
+        {:else}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:275:86
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m        {:else}
+          <DomesticTransfer onTransferReady={handleTransferReady} bind:selectedUser={[35mselectedUser[36m} bind:transferAmount={transferAmount} />
+        {/if}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:292:20
+[31mError[39m: Variable 'selectedUser' implicitly has an 'any' type. (js)
+[36m            <div class="space-y-2 text-sm">
+              {#if [35mselectedUser[36m}
+                <div class="flex justify-between">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:361:24
+[31mError[39m: 'user.profile.preferredBank' is possibly 'undefined'. (js)
+[36m                  <div class="text-sm text-sky-600">{preferredBank.fullName}</div>
+                  {#if [35muser.profile.preferredBank[36m.accountNumber}
+                    <div class="text-xs text-sky-500 mt-1">Account: {user.profile.preferredBank.accountNumber}</div>
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:362:70
+[31mError[39m: 'user.profile.preferredBank' is possibly 'undefined'. (js)
+[36m                  {#if user.profile.preferredBank.accountNumber}
+                    <div class="text-xs text-sky-500 mt-1">Account: {[35muser.profile.preferredBank[36m.accountNumber}</div>
+                  {/if}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\+page.svelte[39m:423:38
+[31mError[39m: Type 'number' is not assignable to type 'null | undefined'. (js)
+[36m      </div>
+      <TransferHistory userId={null} [35mmaxItems[36m={3} showFilters={false} compact={true} />
+    </div>
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\history\+page.svelte[39m:146:5
+[33mWarn[39m: Unknown at rule @apply (css)
+[36m  :global(body) {
+    [35m@apply[36m bg-gradient-to-br from-sky-50 via-white to-cyan-50;
+  }
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\login\+page.svelte[39m:35:22
+[31mError[39m: 'err' is of type 'unknown'. (js)
+[36m      console.error('Login error:', err);
+      errorMessage = [35merr[36m.message || 'Failed to login';
+    } finally {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:5:7
+[31mError[39m: Variable 'user' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  
+  let [35muser[36m = null;
+  let loading = true;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:7:7
+[31mError[39m: Variable 'error' implicitly has type 'any' in some locations where its type cannot be determined. (js)
+[36m  let loading = true;
+  let [35merror[36m = null;
+  
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:16:34
+[31mError[39m: Property 'user' does not exist on type '{ subscribe: (this: void, run: Subscriber<AuthState>, invalidate?: Invalidator<AuthState> | undefined) => Unsubscriber; ... 4 more ...; clearLoading: () => void; }'. (js)
+[36m      const authState = auth;
+      if (authState && authState.[35muser[36m) {
+        user = authState.user;
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:17:26
+[31mError[39m: Property 'user' does not exist on type '{ subscribe: (this: void, run: Subscriber<AuthState>, invalidate?: Invalidator<AuthState> | undefined) => Unsubscriber; ... 4 more ...; clearLoading: () => void; }'. (js)
+[36m      if (authState && authState.user) {
+        user = authState.[35muser[36m;
+      } else {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:29:15
+[31mError[39m: 'err' is of type 'unknown'. (js)
+[36m    } catch (err) {
+      error = [35merr[36m.message;
+    } finally {
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:47:19
+[31mError[39m: Variable 'error' implicitly has an 'any' type. (js)
+[36m          </div>
+        {:else if [35merror[36m}
+          <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\test\+page.svelte[39m:52:19
+[31mError[39m: Variable 'user' implicitly has an 'any' type. (js)
+[36m          </div>
+        {:else if [35muser[36m}
+          <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\users\+page.svelte[39m:27:29
+[31mError[39m: Parameter 'selectedUser' implicitly has an 'any' type. (js)
+[36m  
+  function handleUserSelect([35mselectedUser[36m) {
+    // Navigate to main page with selected user for transfer
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\users\+page.svelte[39m:90:9
+[31mError[39m: Type '(selectedUser: any) => void' is not assignable to type 'null | undefined'. (js)
+[36m        showSelectButton={true}
+        [35monUserSelect[36m={handleUserSelect}
+        currentUserId={user?.id}
+[39m
+
+c:\Users\YYS PP WAHA BGL\Desktop\programing\projek1\[32msrc\routes\users\+page.svelte[39m:91:30
+[31mError[39m: Property 'id' does not exist on type 'User'. (js)
+[36m        onUserSelect={handleUserSelect}
+        currentUserId={user?.[35mid[36m}
+      />
+[39m
+
+====================================
+[31msvelte-check found 198 errors and 32 warnings in 20 files
+[39m

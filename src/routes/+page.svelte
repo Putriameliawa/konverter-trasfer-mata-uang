@@ -3,8 +3,6 @@
   import DomesticTransfer from '$lib/components/DomesticTransfer.svelte';
   import HandDetector from '$lib/components/HandDetector.svelte';
   import TransferHistory from '$lib/components/TransferHistory.svelte';
-  import Logo from '$lib/components/Logo.svelte';
-  import LanguageSelector from '$lib/components/LanguageSelector.svelte';
   import { CURRENCIES } from '$lib/currency';
   import { getBankById } from '$lib/banks';
   import { auth } from '$lib/auth';
@@ -151,102 +149,23 @@
   <meta name="keywords" content="currency converter, hand gesture, biometric, payment, exchange rates" />
 </svelte:head>
 
-<div class="min-h-screen py-8 px-4 relative overflow-hidden">
-  <!-- Decorative background elements -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-10 w-32 h-32 bg-sky-200/20 rounded-full blur-xl floating"></div>
-    <div class="absolute top-40 right-20 w-24 h-24 bg-cyan-200/30 rounded-full blur-lg floating" style="animation-delay: -2s;"></div>
-    <div class="absolute bottom-20 left-1/3 w-40 h-40 bg-blue-200/15 rounded-full blur-2xl floating" style="animation-delay: -4s;"></div>
-  </div>
-  
-  <div class="container mx-auto max-w-4xl relative z-10">
-    <!-- Header -->
-    <header class="text-center mb-12 floating">
-      <!-- User Info and Logout -->
-      {#if user}
-        <div class="flex justify-between items-center mb-6">
-          <div class="text-left">
-            <p class="text-sm text-sky-600">{$t('auth.welcomeBack')}</p>
-            <p class="font-semibold text-sky-800">{user.email}</p>
-            {#if preferredBank}
-              <div class="flex items-center mt-1 text-xs text-sky-500">
-                <span class="mr-1">{preferredBank.logo}</span>
-                <span>{preferredBank.name} • {preferredBank.fullName}</span>
-              </div>
-            {/if}
-          </div>
-          <div class="flex items-center space-x-3">
-            <!-- Language Selector -->
-            <LanguageSelector />
-            
-           
-
-            <a
-              href="/users"
-              class="px-4 py-2 text-sm bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-              </svg>
-              <span>{$t('nav.users')}</span>
-            </a>
-            
-            
-            
-            <a
-              href="/history"
-              class="px-4 py-2 text-sm bg-purple-100 hover:bg-purple-200 text-purple-700 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              <span>{$t('nav.history')}</span>
-            </a>
-            <a
-              href="/profile"
-              class="px-4 py-2 text-sm bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              <span>{$t('nav.profile')}</span>
-            </a>
-            <button
-              on:click={handleLogout}
-              class="px-4 py-2 text-sm bg-sky-100 hover:bg-sky-200 text-sky-700 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-              </svg>
-              <span>{$t('nav.logout')}</span>
-            </button>
-          </div>
-        </div>
-      {:else}
-        <!-- Language selector for non-authenticated users -->
-        <div class="flex justify-end mb-6">
-          <LanguageSelector />
-        </div>
-      {/if}
-      
-      <!-- Logo -->
-      <div class="flex items-center justify-center mb-6 logo-glow">
-        <Logo size={80} animated={true} />
-      </div>
-      
-      <h1 class="text-5xl font-bold bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-4">
+<div class="relative">
+    
+    <!-- Hero / Welcome Message (Replaces Header Title) -->
+    <div class="text-center mb-10 mt-4">
+      <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-4">
         {$t('main.title')}
       </h1>
-      <p class="text-sky-700 text-xl font-medium">
+      <p class="text-sky-700 text-lg md:text-xl font-medium">
         {$t('main.subtitle')}
       </p>
       <div class="w-24 h-1 bg-gradient-to-r from-sky-300 to-cyan-400 mx-auto mt-4 rounded-full"></div>
-    </header>
+    </div>
     
     <!-- Success Notification -->
     {#if showNotification && transferStatus === 'success'}
       <div 
-        class="fixed top-4 right-4 z-50 bg-gradient-to-r from-emerald-400 to-teal-500 text-white px-6 py-4 rounded-2xl shadow-2xl transform transition-all duration-500 animate-bounce-slow backdrop-blur-lg"
+        class="fixed top-24 right-4 z-50 bg-gradient-to-r from-emerald-400 to-teal-500 text-white px-6 py-4 rounded-2xl shadow-2xl transform transition-all duration-500 animate-bounce-slow backdrop-blur-lg"
         role="alert"
       >
         <div class="flex items-center space-x-3">
@@ -286,12 +205,12 @@
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-green-800 mb-2">Transfer Dalam Negeri</h3>
-        <p class="text-green-600 text-sm mb-4">Transfer IDR ke pengguna di seluruh Indonesia dengan biaya admin rendah</p>
+        <p class="text-green-600 text-sm mb-4">Transfer IDR ke pengguna di seluruh Indonesia with low fees</p>
         <button 
           on:click={() => transferMode = 'domestic'}
           class="text-xs text-green-600 hover:text-green-700 font-medium"
         >
-          Coba Sekarang →
+          Try Now →
         </button>
       </div>
 
@@ -303,13 +222,11 @@
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-blue-800 mb-2">{$t('nav.users')}</h3>
-        <p class="text-blue-600 text-sm mb-4">Transfer mata uang ke pengguna lain dalam aplikasi dengan mudah dan aman</p>
+        <p class="text-blue-600 text-sm mb-4">Transfer currency to other users easily and securely</p>
         <a href="/users" class="text-xs text-blue-600 hover:text-blue-700 font-medium">
-          Lihat Pengguna →
+          View Users →
         </a>
       </div>
-
-
 
       <!-- Biometric Verification -->
       <div class="glass-card p-6 text-center floating" style="animation-delay: -8s;">
@@ -319,8 +236,7 @@
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-purple-800 mb-2">Verifikasi Biometrik</h3>
-        <p class="text-purple-600 text-sm mb-4">Keamanan tingkat tinggi dengan deteksi wajah dan telapak tangan</p>
-       
+        <p class="text-purple-600 text-sm mb-4">High level security with face and hand detection</p>
       </div>
     </div>
 
@@ -508,7 +424,7 @@
     </div>
     
     <!-- Instructions -->
-    <div class="glass-card p-8 mt-8 floating" style="animation-delay: -5s;">
+    <div class="glass-card p-8 floating" style="animation-delay: -5s;">
       <h3 class="text-2xl font-semibold text-sky-800 mb-6 text-center">{$t('main.howItWorks')}</h3>
       <div class="grid md:grid-cols-3 gap-8 text-sm text-sky-600">
         <div class="text-center group">
@@ -537,21 +453,4 @@
       </div>
     </div>
     
-    <!-- Footer -->
-    <footer class="text-center mt-12 text-sky-500 text-sm">
-      <div class="flex items-center justify-center mb-3">
-        <Logo size={30} animated={false} />
-        <span class="ml-2 font-medium text-sky-600">{$t('main.title')}</span>
-      </div>
-      <p class="opacity-75">{$t('main.builtWith')}</p>
-      <p class="mt-1 opacity-75">{$t('main.exchangeRatesBy')}</p>
-      
-      <!-- Creator Information -->
-      <div class="mt-4 pt-4 border-t border-sky-200">
-        <p class="text-sky-600 font-medium mb-1">{$t('main.createdBy')}</p>
-        <p class="text-sky-700 font-semibold">{$t('main.creator')}</p>
-        <p class="text-sky-500 text-xs mt-1">{$t('main.school')}</p>
-      </div>
-    </footer>
-  </div>
 </div>
